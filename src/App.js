@@ -1,22 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route, Link, Switch, BrowserRouter } from 'react-router-dom';
+import Home from './pages/home';
+
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Link to="/home">Home</Link>
-      </div>
-      <div>
-        <Link to="/login">login</Link>
-      </div>
-      <div>
-        <Link to="/member">member center</Link>
-      </div>
-      <div>
-        <Link to="/orders">orders</Link>
-      </div>
+      <Route path="/" component={Home}></Route>
 
       <Switch>
         <Route path="/home">Home</Route>
